@@ -11,11 +11,21 @@
       <v-col cols="6" class="text-center">
         <v-img :src="cat1.url" contain height="200" />
         <v-btn class="mt-2" @click="voteForCat(cat1)">Vote for this cat</v-btn>
+        <v-btn class="ml-2 mt-2" fab dark small color="pink">
+          <v-icon dark>
+            mdi-heart
+          </v-icon>
+        </v-btn>
       </v-col>
 
       <v-col cols="7" class="text-center">
         <v-img :src="cat2.url" contain height="200" />
         <v-btn class="mt-2" @click="voteForCat(cat2)">Vote for this cat</v-btn>
+        <v-btn class="ml-2 mt-2" fab dark small color="pink">
+          <v-icon dark>
+            mdi-heart
+          </v-icon>
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -35,6 +45,7 @@ export default Vue.extend({
     cats: [] as Cats[],
     cat1: {} as Cats,
     cat2: {} as Cats,
+    scores: {} as Record<string, number>
   }),
 
 
@@ -43,9 +54,11 @@ export default Vue.extend({
       try {
         const response = await getCats();
 
-        // Check if the response has the expected structure
         if (response.data && response.data.images) {
           this.cats = response.data.images;
+          this.cats.forEach((cat) => {
+            this.scores[cat.url] = 0; // Initialize scores to 0
+          });
           this.pickRandomCats();
         } else {
           this.cats = [];
@@ -63,8 +76,11 @@ export default Vue.extend({
     },
 
     voteForCat(cat: Cats) {
-      cat.score++;
+      this.scores[cat.url] += 1; // Increment score for the selected cat
       this.pickRandomCats(); // Load two new cats for the next round
+
+      // Event to inform parent for scores
+      this.$emit('update-scores', this.scores);
     },
   },
 

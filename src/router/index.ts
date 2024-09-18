@@ -7,16 +7,17 @@ Vue.use(VueRouter)
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'home',
+    name: 'ChooseCat',
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/scores',
+    name: 'ViewScores',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/ScoresView.vue'),
+    props: (route) => ({ scores: route.params.scores })
   }
 ]
 
