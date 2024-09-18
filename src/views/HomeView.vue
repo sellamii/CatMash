@@ -1,16 +1,16 @@
 <template>
-  <hello-world />
+  <choose-cat />
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
-  import HelloWorld from '../components/HelloWorld.vue'
+  import ChooseCat from '../components/ChooseCat.vue'
 
   export default Vue.extend({
     name: 'Home',
 
     components: {
-      HelloWorld,
+      ChooseCat,
     },
   })
 </script>

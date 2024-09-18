@@ -1,10 +1,10 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import ChooseCat from '@/components/ChooseCat.vue'
 
-describe('HelloWorld.vue', () => {
+describe('ChooseCat.vue', () => {
   it('renders props.msg when passed', () => {
     const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
+    const wrapper = shallowMount(ChooseCat, {
       propsData: { msg }
     })
     expect(wrapper.text()).toMatch(msg)
