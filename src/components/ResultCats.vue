@@ -1,10 +1,6 @@
 <template>
     <v-container>
         <v-row justify="center">
-            <v-col cols="12">
-                <p class="font-italic text-h4 text-center">Scores for Each Cat</p>
-            </v-col>
-
             <!-- Display paginated cats -->
             <v-col cols="12" md="4" v-for="({ catUrl, score }, index) in paginatedCats" :key="index"
                 class="d-flex align-center justify-center">
@@ -32,10 +28,11 @@
             </v-col>
 
             <!-- Pagination Controls -->
-            <v-col cols="12" class="text-center mt-5">
-                <v-pagination v-model="currentPage" :length="totalPages" circle></v-pagination>
+            <v-col cols="12" class="text-center mb-12">
+                <v-pagination v-model="currentPage" :length="totalPages" color="pink"></v-pagination>
             </v-col>
         </v-row>
+
     </v-container>
 </template>
 
@@ -99,5 +96,9 @@ export default Vue.extend({
 
 .cat-card:hover {
     transform: translateY(-10px);
+}
+
+.titleCardColor {
+    color: #f1aada
 }
 </style>

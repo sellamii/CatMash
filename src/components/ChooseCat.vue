@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <p class="font-italic text-h4 text-center">This is a Vote for the cutest cat <v-icon large>mdi mdi-cat</v-icon>
+        <p class="font-italic text-h4">This is a Vote for the cutest cat <v-icon large>mdi mdi-cat</v-icon>
         </p>
       </v-col>
     </v-row>

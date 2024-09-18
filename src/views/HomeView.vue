@@ -1,8 +1,8 @@
 <template>
-  <v-parallax height="1000" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+  <v-parallax height="1000" src="@/assets/img/catsVote.png">
 
     <!-- The ChooseCat component -->
-    <div class="mt-10">
+    <div class="mr-12">
       <choose-cat @update-scores="updateScores" @user-voted="userHasVoted" />
     </div>
 

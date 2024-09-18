@@ -1,11 +1,13 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12">
-        <result-cats :scores="scores" />
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-parallax height="1500" src="@/assets/img/catsResult.jpg">
+    <v-container>
+      <v-row>
+        <v-col cols="12">
+          <result-cats :scores="scores" />
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-parallax>
 </template>
 
 <script lang="ts">
