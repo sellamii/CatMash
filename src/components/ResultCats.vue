@@ -57,13 +57,18 @@ export default Vue.extend({
         };
     },
     computed: {
+        // Method to get paginated and sorted cats
         paginatedCats(): { catUrl: string; score: number }[] {
+            // First, convert the object into an array and sort by score in descending order
+            const sortedCats = Object.entries(this.scores)
+                .sort(([, scoreA], [, scoreB]) => scoreB - scoreA) // Sort by score, descending
+
             // Compute the start and end index for the current page
             const start = (this.currentPage - 1) * this.itemsPerPage;
             const end = start + this.itemsPerPage;
 
-            // Slice the cats to display only those on the current page
-            return Object.entries(this.scores).slice(start, end).map(([catUrl, score]) => ({
+            // Slice the sorted array to only return the cats for the current page
+            return sortedCats.slice(start, end).map(([catUrl, score]) => ({
                 catUrl,
                 score,
             }));
@@ -82,7 +87,6 @@ export default Vue.extend({
     },
 });
 </script>
-
 
 <style scoped>
 .cat-card {
