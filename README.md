@@ -60,7 +60,7 @@ The project is organized to separate components and views for easier maintenance
 
 ## Hosting
 
-The application is hosted on [hosting-service-name](https://your-app-link).
+The application is hosted on https://kitkatt.netlify.app.
 
 ## Code Conventions
 
