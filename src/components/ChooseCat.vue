@@ -2,17 +2,20 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <h2>Vote for the cutest cat</h2>
+        <p class="font-italic text-h4 text-center">This is a Vote for the cutest cat <v-icon large>mdi mdi-cat</v-icon>
+        </p>
       </v-col>
+    </v-row>
 
+    <v-row>
       <v-col cols="6" class="text-center">
         <v-img :src="cat1.url" contain height="200" />
-        <v-btn @click="voteForCat(cat1)">Vote for this cat</v-btn>
+        <v-btn class="mt-2" @click="voteForCat(cat1)">Vote for this cat</v-btn>
       </v-col>
 
-      <v-col cols="6" class="text-center">
+      <v-col cols="7" class="text-center">
         <v-img :src="cat2.url" contain height="200" />
-        <v-btn @click="voteForCat(cat2)">Vote for this cat</v-btn>
+        <v-btn class="mt-2" @click="voteForCat(cat2)">Vote for this cat</v-btn>
       </v-col>
     </v-row>
   </v-container>
