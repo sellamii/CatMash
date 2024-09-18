@@ -8,7 +8,6 @@
         <span class="mr-2">L 'Atelier</span>
       </div>
       <v-btn text to="/">Vote</v-btn>
-      <v-btn text to="/scores">View Scores</v-btn>
 
       <v-spacer></v-spacer>
 
