@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a mini web application inspired by the UX of **Facemash**. The goal is to vote for the cutest cat from a set of photos and view the scores of each cat. The data used is sourced from the JSON file provided by l'atelier: [https://data.latelier.co/cats.json](https://data.latelier.co/cats.json).
+This project is a mini web application. The goal is to vote for the cutest cat from a set of photos and view the scores of each cat. The data used is sourced from the JSON file provided by l'atelier: [https://data.latelier.co/cats.json](https://data.latelier.co/cats.json).
 
 ## Features
 
